@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="vm"
+            type="com.example.explicitintentspt1.PersonViewModel" />
+    </data>
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:textColor="@android:color/black">
+    <TextView
+        android:theme="@style/BoldHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <EditText
+        android:id="@+id/firstNameEditText"
+        android:text="@={vm.firstName}"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:width="30dp"
+        android:textColor="@android:color/black"/>
+    <TextView
+        android:theme="@style/BoldHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Surname"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+    <EditText
+        android:id="@+id/surnameEditText"
+        android:text="@={vm.surname}"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black" />
+    <Button
+        android:id="@+id/goToIntent2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="moveToOtherActivity"
+        android:text="@string/first_intent_button" />
+    </LinearLayout>
+</layout>
